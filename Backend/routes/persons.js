@@ -36,7 +36,7 @@ router.route("/").get((req,res)=>{
 
 })
 
-//update person data
+//update personal data
 router.route("/update/:id").put(async (req, res) => {
 
     let personID = req.params.id;
@@ -60,7 +60,7 @@ router.route("/update/:id").put(async (req, res) => {
     })
 })
 
-//delete person data
+//delete personal data
 router.route("/delete/:id").delete(async(req, res) => {
     let personID = req.params.id;
 
@@ -73,7 +73,7 @@ router.route("/delete/:id").delete(async(req, res) => {
     })
 })
 
-//view person data
+//view personal data
 router.route("/get/:id").get(async (req, res) => {
     let personID = req.params.id;
     const personUser = await Person.findById(personID)
